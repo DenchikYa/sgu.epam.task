@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Emelyanov.2", "Epam.Emelyanov.2\Epam.Emelyanov.2.csproj", "{2D933C36-ED4A-4751-AB53-EDE34134C50B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.Emelyanov.2", "Epam.Emelyanov.2\Epam.Emelyanov.2.csproj", "{16413732-5B6D-41A0-B674-D59B2EDEE9F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D933C36-ED4A-4751-AB53-EDE34134C50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D933C36-ED4A-4751-AB53-EDE34134C50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D933C36-ED4A-4751-AB53-EDE34134C50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D933C36-ED4A-4751-AB53-EDE34134C50B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16413732-5B6D-41A0-B674-D59B2EDEE9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16413732-5B6D-41A0-B674-D59B2EDEE9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16413732-5B6D-41A0-B674-D59B2EDEE9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16413732-5B6D-41A0-B674-D59B2EDEE9F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1D973ACC-1A92-4AD4-A2A2-24590B60C2B3}
+		SolutionGuid = {F32DA240-C739-4294-B6E8-51871F37C70C}
 	EndGlobalSection
 EndGlobal

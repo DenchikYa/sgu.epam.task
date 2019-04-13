@@ -11,7 +11,7 @@ namespace Epam.Emelyanov._2
         private string experience;
         private string position;
 
-        public string Experience
+        public string _Experience
         {
             get
             {
@@ -19,14 +19,14 @@ namespace Epam.Emelyanov._2
             }
             set
             {
-                if (value == "" || !int.TryParse(value, out int e) || e < 0)
+                if (string.IsNullOrEmpty(value) || !int.TryParse(value, out int e) || e < 0)
                 {
                     throw new ArgumentException("Invalid experience!");
                 }
                 experience = value;
             }
         }
-        public string Position
+        public string _Position
         {
             get
             {
@@ -34,7 +34,7 @@ namespace Epam.Emelyanov._2
             }
             set
             {
-                if (value != "")
+                if (!string.IsNullOrEmpty(value))
                 {
                     foreach (char c in value)
                     {
@@ -52,10 +52,14 @@ namespace Epam.Emelyanov._2
             }
         }
 
-        public Employee(string _firstName, string _lastName, string _patronymic, DateTime _dateOfBirth, string _age, string _experience, string _position) : base(_firstName, _lastName, _patronymic, _dateOfBirth, _age)
+        public Employee(string firstName, string lastName, string patronymic, DateTime dateOfBirth, string age, string experience, string position) : base(firstName, lastName, patronymic, dateOfBirth, age)
         {
-            Experience = _experience;
-            Position = _position;
+            _Experience = experience;
+            _Position = position;
+        }
+        public override string ToString()
+        {
+            return ($"ФИО: {_FirstName} {_LastName} {_Patronymic}, Дата рождения: {_DateOfBrith.ToLongDateString()}, Возраст: {_Age}, Стаж: {_Experience}, Должность: {_Position}");
         }
     }
 }

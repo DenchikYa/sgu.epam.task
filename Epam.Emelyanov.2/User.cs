@@ -14,7 +14,7 @@ namespace Epam.Emelyanov._2
         private DateTime dateOfBrith;
         private string age;
 
-        public string FirstName
+        public string _FirstName
         {
             get
             {
@@ -22,7 +22,7 @@ namespace Epam.Emelyanov._2
             }
             set
             {
-                if(value != "")
+                if(!string.IsNullOrEmpty(value))
                 {
                     foreach (char c in value)
                     {
@@ -39,7 +39,7 @@ namespace Epam.Emelyanov._2
                 }           
             }
         }
-        public string LastName
+        public string _LastName
         {
             get
             {
@@ -47,7 +47,7 @@ namespace Epam.Emelyanov._2
             }
             set
             {
-                if(value != "")
+                if(!string.IsNullOrEmpty(value))
                 {
                     foreach (char c in value)
                     {
@@ -64,7 +64,7 @@ namespace Epam.Emelyanov._2
                 }           
             }
         }
-        public string Patronymic
+        public string _Patronymic
         {
             get
             {
@@ -72,7 +72,7 @@ namespace Epam.Emelyanov._2
             }
             set
             {
-                if(value != "")
+                if(!string.IsNullOrEmpty(value))
                 {
                     foreach (char c in value)
                     {
@@ -89,7 +89,7 @@ namespace Epam.Emelyanov._2
                 }                
             }
         }
-        public DateTime DateOfBitrh
+        public DateTime _DateOfBrith
         {
             get
             {
@@ -100,7 +100,7 @@ namespace Epam.Emelyanov._2
                 dateOfBrith = value;
             }
         }
-        public string Age
+        public string _Age
         {
             get
             {
@@ -108,7 +108,7 @@ namespace Epam.Emelyanov._2
             }
             set
             {                
-                if(value == "" || !int.TryParse(value,out int a) || a < 0)
+                if(string.IsNullOrEmpty(value) || !int.TryParse(value,out int a) || a < 0)
                 {
                     throw new ArgumentException("Invalid age!");
                 }
@@ -116,14 +116,17 @@ namespace Epam.Emelyanov._2
             }
         }
 
-        public User(string _firstName, string _lastName, string _patronymic, DateTime _dateOfBirth, string _age)
+        public User(string firstName, string lastName, string patronymic, DateTime dateOfBirth, string age)
         {
-            FirstName = _firstName;
-            LastName = _lastName;
-            Patronymic = _patronymic;
-            dateOfBrith = _dateOfBirth;
-            Age = _age;
+            _FirstName = firstName;
+            _LastName = lastName;
+            _Patronymic = patronymic;
+            _DateOfBrith = dateOfBirth;
+            _Age = age;
         }
-
+        public override string ToString()
+        {
+            return ($"Имя: {_FirstName}, Фамилия: {_LastName}, Отчество: {_Patronymic}, Дата рождения: {_DateOfBrith.ToLongDateString()}, Возраст: {_Age}");
+        }
     }
 }

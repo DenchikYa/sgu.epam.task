@@ -12,7 +12,7 @@ namespace Epam.Emelyanov._2
         private int outerRadius;
         private int innerRadius;
 
-        public Point Center
+        public Point _Center
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Epam.Emelyanov._2
                 center = value;
             }
         }
-        public int OuterRadius
+        public int _OuterRadius
         {
             get
             {
@@ -38,7 +38,7 @@ namespace Epam.Emelyanov._2
                 outerRadius = value;
             }
         }
-        public int InnerRadius
+        public int _InnerRadius
         {
             get
             {
@@ -52,6 +52,17 @@ namespace Epam.Emelyanov._2
                 }
                 innerRadius = value;
             }
+        }
+
+        public Ring(Point Center, int outerRadius, int innerRadius)
+        {
+            if (outerRadius <= innerRadius)
+            {
+                throw new ArgumentException("Invalid Ring!");
+            }
+            _Center = Center;
+            _OuterRadius = outerRadius;
+            _InnerRadius = innerRadius;
         }
         public double SumCircumferenceRadius
         {
@@ -80,12 +91,6 @@ namespace Epam.Emelyanov._2
             {
                 return (Math.PI * (outerRadius * outerRadius - innerRadius * innerRadius));
             }
-        }
-        public Ring(Point _Center, int _outerRadius, int _innerRadius)
-        {
-            Center = _Center;
-            OuterRadius = _outerRadius;
-            InnerRadius = _innerRadius;
         }
         public string ShowRing()
         {
