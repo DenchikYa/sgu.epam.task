@@ -1,0 +1,3 @@
+ФИО: Emelyanov Denis Olegovich, Дата рождения: 27 июля 1998 г., Возраст: 20, Стаж: 4, Должность: Student
+ФИО: Malenov Vladislav Sergeevich, Дата рождения: 1 марта 1999 г., Возраст: 20, Стаж: 5, Должность: Developer
+ФИО: Pastuhov Nikita Vladimirovich, Дата рождения: 9 января 1998 г., Возраст: 21, Стаж: 1, Должность: Entrepreneur
